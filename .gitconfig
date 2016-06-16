@@ -12,3 +12,6 @@
 	oldHighlight = "red bold #700000"
 	newNormal = "green bold #003000"
 	newHighlight = "green bold #007000"
+[color "diff"]
+	new = "green bold #003000"
+	old = "red bold #300000"
