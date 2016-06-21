@@ -167,6 +167,7 @@ nmap <silent> <leader>b :TagbarToggle<CR>
 
 " ----- kien/ctrlp settings -----
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
+let g:ctrlp_max_files = 0
 
 " ----- airblade/vim-gitgutter settings -----
 " Required after having changed the colorscheme
