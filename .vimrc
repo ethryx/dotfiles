@@ -89,6 +89,7 @@ set softtabstop=2
 set nowrap
 set clipboard=unnamed
 set timeoutlen=1000 ttimeoutlen=0
+set cursorline
 syntax on
 
 set mouse=a
@@ -131,7 +132,7 @@ nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
 nmap <silent> <leader>n :NERDTreeFind<CR>
 
 " To have NERDTree always open on startup
-let g:nerdtree_tabs_open_on_console_startup = 1
+let g:nerdtree_tabs_open_on_console_startup = 0
 let g:nerdtree_tabs_smart_startup_focus = 2
 
 " Show hidden files in tree
@@ -215,8 +216,8 @@ map <F12> :w<CR>
 map <S-F12> :wq<CR>
 " 10. Replace all occurences of word under cursor
 nnoremap <Leader>r :%s/\<<C-r><C-w>\>//g<Left><Left>
-" 11. Press ENTER to insert a new line without entering insert mode
-nmap <CR> o<Esc>
+" 11. Press ENTER to insert a new line (when not in insert mode)
+nmap <CR> o
 " 12. Split vertically and horizontally
 map <S-Right> :rightbelow vnew<CR>
 map <C-S-Right> :botright vnew<CR>
