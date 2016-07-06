@@ -1,5 +1,6 @@
 " Gotta be first
 set nocompatible
+set shell=/bin/bash
 
 filetype off
 
@@ -48,7 +49,7 @@ Plugin 'jez/vim-c0'
 Plugin 'jez/vim-ispc'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'pangloss/vim-javascript'
-Plugin 'othree/yajs.vim'
+"Plugin 'othree/yajs.vim'
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'Glench/Vim-Jinja2-Syntax'
