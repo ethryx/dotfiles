@@ -16,3 +16,8 @@
 [color "diff"]
 	new = "green bold #003000"
 	old = "red bold #300000"
+[alias]
+  cleanupdry = "!git branch --merged | grep -v '\\*' | grep -v master | grep -v develop | xargs -n 1 echo"
+  cleanup = "!git branch --merged | grep -v '\\*' | grep -v master | grep -v develop | xargs -n 1 git branch -d"
+  co = "checkout"
+  create = "checkout -b"
