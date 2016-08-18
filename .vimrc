@@ -1,5 +1,6 @@
 " Gotta be first
 set nocompatible
+set hidden
 set shell=/bin/bash
 
 filetype off
@@ -168,7 +169,14 @@ nmap <silent> <leader>b :TagbarToggle<CR>
 "autocmd BufEnter * nested :call tagbar#autoopen(0)
 
 " ----- kien/ctrlp settings -----
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
+" Use ag over grep
+set grepprg=ag\ --nogroup\ --nocolor
+
+" Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+" ag is fast enough that CtrlP doesn't need to cache
+"let g:ctrlp_use_caching = 0
 let g:ctrlp_max_files = 0
 
 " ----- airblade/vim-gitgutter settings -----
@@ -225,3 +233,6 @@ map <C-S-Right> :botright vnew<CR>
 map <S-Down> :rightbelow new<CR>
 map <C-S-Down> :botright new<CR>
 map <S-Up> :topleft new<CR>
+" 13. Bind K to grep word under cursor
+nnoremap \ :Ag "\b<C-R><C-W>\b"<CR>:cw<CR>
+nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
