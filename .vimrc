@@ -92,6 +92,7 @@ set nowrap
 set clipboard=unnamed
 set timeoutlen=1000 ttimeoutlen=0
 set cursorline
+set ttymouse=sgr
 syntax on
 
 set mouse=a
