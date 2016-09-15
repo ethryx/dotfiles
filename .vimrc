@@ -98,6 +98,7 @@ syntax on
 
 set mouse=a
 
+let mapleader = ","
 " ----- Plugin-Specific Settings --------------------------------------
 
 set background=dark
