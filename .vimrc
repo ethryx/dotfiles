@@ -21,6 +21,7 @@ Plugin 'mhinz/vim-janah'
 Plugin 'notpratheek/vim-luna'
 Plugin 'crusoexia/vim-monokai'
 Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'flazz/vim-colorschemes'
 
 " ----- Vim as a programmer's text editor -----------------------------
 Plugin 'scrooloose/nerdtree'
@@ -215,12 +216,14 @@ map <F6> :noh<CR>
 map <F7> :syntax sync fromstart<CR>
 " 6. Git blame
 map <F8> :Gblame<CR>
-" 7. Quit
+" 7. Close the window (or quit if it is the last window)
 map <F10> :q<CR>
 map <S-F10> :q!<CR>
+map <C-x> :q<CR>
 " 8. Close buffer
 map <F11> :Bdelete<CR>
 map <S-F11> :Bdelete!<CR>
+map <C-W> :Bdelete<CR>
 " 9. Save
 map <F12> :w<CR>
 map <S-F12> :wq<CR>
@@ -228,12 +231,15 @@ map <S-F12> :wq<CR>
 nnoremap <Leader>r :%s/\<<C-r><C-w>\>//g<Left><Left>
 " 11. Press ENTER to insert a new line (when not in insert mode)
 nmap <CR> o
-" 12. Split vertically and horizontally
+" 12. Split vertically and horizontally (using arrow keys)
 map <S-Right> :rightbelow vnew<CR>
 map <C-S-Right> :botright vnew<CR>
 map <S-Down> :rightbelow new<CR>
 map <C-S-Down> :botright new<CR>
 map <S-Up> :topleft new<CR>
-" 13. Bind K to grep word under cursor
+" 13. Split vertically and horizontally (using J and L)
+map <S-L> :rightbelow vnew<CR>
+map <S-J> :rightbelow new<CR>
+" 14. Bind K to grep word under cursor
 nnoremap \ :Ag "\b<C-R><C-W>\b"<CR>:cw<CR>
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
