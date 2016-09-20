@@ -260,4 +260,7 @@ vnoremap <Down> <Nop>
 inoremap <Left> <Nop>
 inoremap <Right> <Nop>
 inoremap <Up> <Nop>
+" 16. NERDTree shortcuts
+map <C-T> :NERDTreeToggle<CR>
+map <C-G> :NERDTreeFind<CR>
 inoremap <Down> <Nop>
