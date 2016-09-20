@@ -22,6 +22,8 @@ Plugin 'notpratheek/vim-luna'
 Plugin 'crusoexia/vim-monokai'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'morhetz/gruvbox'
+Plugin 'rakr/vim-two-firewatch'
 
 " ----- Vim as a programmer's text editor -----------------------------
 Plugin 'scrooloose/nerdtree'
@@ -53,7 +55,6 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'pangloss/vim-javascript'
 "Plugin 'othree/yajs.vim'
 Plugin 'othree/javascript-libraries-syntax.vim'
-Plugin 'morhetz/gruvbox'
 Plugin 'Glench/Vim-Jinja2-Syntax'
 Plugin 'mustache/vim-mustache-handlebars'
 
@@ -104,6 +105,9 @@ let mapleader = ","
 set background=dark
 let g:hybrid_custom_term_colors = 1
 colorscheme monokai
+
+let g:monokai_term_italic = 1
+let g:monokai_gui_italic = 1
 
 " ----- bling/vim-airline settings -----
 " Theme
@@ -244,3 +248,16 @@ map <S-J> :rightbelow new<CR>
 " 14. Bind K to grep word under cursor
 nnoremap \ :Ag "\b<C-R><C-W>\b"<CR>:cw<CR>
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+" 15. Disable arrow keys
+nnoremap <Left> <Nop>
+nnoremap <Right> <Nop>
+nnoremap <Up> <Nop>
+nnoremap <Down> <Nop>
+vnoremap <Left> <Nop>
+vnoremap <Right> <Nop>
+vnoremap <Up> <Nop>
+vnoremap <Down> <Nop>
+inoremap <Left> <Nop>
+inoremap <Right> <Nop>
+inoremap <Up> <Nop>
+inoremap <Down> <Nop>
