@@ -24,10 +24,13 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'morhetz/gruvbox'
 Plugin 'rakr/vim-two-firewatch'
+Plugin 'chase/vim-ansible-yaml'
+"Plugin 'pearofducks/ansible-vim'
 
 " ----- Vim as a programmer's text editor -----------------------------
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
@@ -83,6 +86,7 @@ filetype plugin indent on
 set backspace=indent,eol,start
 set ruler
 set number
+set relativenumber
 set showcmd
 set incsearch
 set hlsearch
@@ -128,6 +132,9 @@ let g:airline_detect_paste=1
 
 " Show airline for tabs too
 let g:airline#extensions#tabline#enabled = 1
+
+" ----- pearofducks/ansible-vmi ------
+let g:ansible_name_highlight = 'd'
 
 " ----- nathanaelkane/vim-indent-guides -----
 let g:indent_guides_auto_colors = 0
@@ -264,3 +271,6 @@ inoremap <Up> <Nop>
 map <C-T> :NERDTreeToggle<CR>
 map <C-G> :NERDTreeFind<CR>
 inoremap <Down> <Nop>
+" 17. Paging up and down
+map <S-J> <PageDown>
+map <S-K> <PageUp>
